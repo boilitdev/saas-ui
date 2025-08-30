@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   title: {
     default: 'ACME',
     template: '%s — ACME',
-  }
+  },
 }
 
-type RootLayoutProps ={
+type RootLayoutProps = {
   children: ReactNode
 }
 

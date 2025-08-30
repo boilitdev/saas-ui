@@ -1,3 +1,7 @@
 export default function HomePage() {
-  return <h1 className='text-3xl font-semibold'>SaaS/UI is great!</h1>
+  return (
+    <div className='flex min-h-screen items-center justify-center'>
+      <div className='flex items-end gap-5 font-medium'>SaaS/UI is great!</div>
+    </div>
+  )
 }

@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@acme/ui": "workspace:~",
     "@tailwindcss/postcss": "~4.1.12",
     "cssnano": "~7.1.1",
     "next": "15.5.2",
