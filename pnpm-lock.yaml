@@ -71,7 +71,7 @@ importers:
         specifier: ~19
         version: 19.0.0
       tailwindcss:
-        specifier: ~4.1.11
+        specifier: ~4.1.12
         version: 4.1.12
     devDependencies:
       '@acme/typescript-config':
