@@ -6,8 +6,8 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'ACME',
-    template: '%s — ACME',
+    default: 'SaaS/UI',
+    template: '%s — SaaS/UI',
   },
 }
 
