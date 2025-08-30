@@ -1,3 +1,3 @@
 export default function HomePage() {
-  return <h1>SaaS/UI is great!</h1>
+  return <h1 className='text-3xl font-semibold'>SaaS/UI is great!</h1>
 }
