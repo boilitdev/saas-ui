@@ -1,5 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "acme",
-  "private": true
+  "private": true,
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "volta": {
+    "node": "22.19.0"
+  }
 }
