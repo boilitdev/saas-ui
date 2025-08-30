@@ -2,6 +2,7 @@
   "recommendations": [
     "EditorConfig.EditorConfig",
     "bradlc.vscode-tailwindcss",
-    "biomejs.biome"
+    "biomejs.biome",
+    "Trunk.io"
   ]
 }

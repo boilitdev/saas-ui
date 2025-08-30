@@ -3,8 +3,12 @@
   "extends": "@acme/typescript-config/react-library.json",
   "compilerOptions": {
     "module": "ESNext",
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src/**/*.tsx"],
+  "include": ["src/**/*.tsx", "src/**/*.ts"],
   "exclude": ["node_modules"]
 }
