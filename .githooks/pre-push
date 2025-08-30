@@ -1,0 +1,4 @@
+#! /bin/bash
+
+pnpm check-types
+pnpm lint

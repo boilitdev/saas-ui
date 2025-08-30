@@ -3,6 +3,7 @@
   "name": "acme",
   "private": true,
   "scripts": {
+    "prepare": "if [ -d .git ]; then git config --local core.hooksPath ./.githooks; fi",
     "check-types": "turbo check-types",
     "lint": "trunk check",
     "format": "trunk fmt",
