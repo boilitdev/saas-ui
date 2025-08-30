@@ -16,7 +16,10 @@
 # Install dependencies
 pnpm install
 
-# Start the development server
+# Check TypeScript types
+bun check-types
+
+# Start the development servers
 bun dev --filter @acme/web
 bun dev --filter @acme/app
 ```

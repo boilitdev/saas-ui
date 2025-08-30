@@ -3,6 +3,7 @@
   "name": "acme",
   "private": true,
   "scripts": {
+    "check-types": "turbo check-types",
     "lint": "trunk check",
     "format": "trunk fmt",
     "dev": "turbo dev",
