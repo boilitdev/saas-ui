@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@acme/web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "~19",
+    "react-dom": "~19",
+    "next": "15.5.2"
+  },
+  "devDependencies": {
+    "@acme/typescript-config": "workspace:~",
+    "@types/node": "~22",
+    "@types/react": "~19",
+    "@types/react-dom": "~19",
+    "typescript": "~5"
+  }
+}
