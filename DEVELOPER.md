@@ -18,4 +18,5 @@ pnpm install
 
 # Start the development server
 bun dev --filter @acme/web
+bun dev --filter @acme/app
 ```
