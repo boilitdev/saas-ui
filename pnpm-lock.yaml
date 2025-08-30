@@ -11,6 +11,12 @@ importers:
       turbo:
         specifier: ~2.5.6
         version: 2.5.6
+    devDependencies:
+      '@acme/typescript-config':
+        specifier: workspace:~
+        version: link:tools/typescript-config
+
+  tools/typescript-config: {}
 
 packages:
 

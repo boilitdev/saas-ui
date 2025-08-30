@@ -6,6 +6,9 @@
   "dependencies": {
     "turbo": "~2.5.6"
   },
+  "devDependencies": {
+    "@acme/typescript-config": "workspace:~"
+  },
   "engines": {
     "node": ">=22.19"
   },
