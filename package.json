@@ -11,7 +11,8 @@
     "turbo": "~2.5.6"
   },
   "devDependencies": {
-    "@acme/typescript-config": "workspace:~"
+    "@acme/typescript-config": "workspace:~",
+    "@biomejs/biome": "2.1.1"
   },
   "packageManager": "pnpm@10.15.0",
   "engines": {
