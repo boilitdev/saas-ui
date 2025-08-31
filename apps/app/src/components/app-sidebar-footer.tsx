@@ -25,7 +25,7 @@ export default function AppSidebarFooter({
     <Sidebar.Menu>
       <Sidebar.MenuItem className='flex items-center justify-between'>
         <div className='flex items-center gap-1'>
-          <Link href={`/${slug}/settings/profile`}>
+          <Link href={`/${slug}/profile`}>
             <AvatarStatus
               alt='user-image'
               className='size-6 ring-sidebar-ring ring-offset-1 ring-offset-sidebar transition-all duration-200 ease-in-out hover:ring-2'

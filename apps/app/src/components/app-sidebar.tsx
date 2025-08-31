@@ -1,7 +1,7 @@
 'use client'
 
 import type { ComponentProps } from 'react'
-import { useParams, usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 import Sidebar from '@acme/ui/components/sidebar'
@@ -19,11 +19,11 @@ import PostComposerDialog from './post-composer-dialog'
 import AppSidebarFavoritesGroup from './app-sidebar-favorite-group'
 import AppSidebarFooter from './app-sidebar-footer'
 
-type AppSidebarProps = ComponentProps<typeof Sidebar>
+type AppSidebarProps = ComponentProps<typeof Sidebar> & {
+  slug: string
+}
 
-export default function AppSidebar({ ...props }: AppSidebarProps) {
-  const { slug } = useParams<{ slug: string }>()
-
+export default function AppSidebar({ slug, ...props }: AppSidebarProps) {
   const { data: user } = useUser()
   const { data: spaces } = useSpaces()
   const { data: draftPosts } = useDraftPosts()

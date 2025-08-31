@@ -10,7 +10,7 @@ import KeyboardShortcut from '@acme/ui/components/keyboard-shortcut'
 import { CircleQuestionMarkIcon } from '@acme/ui/icon'
 import Icon from '@acme/ui/components/icon'
 
-import { helpNav } from '@/config/help'
+import { navItems } from '@/config/help'
 
 import ShortcutSheet from './shortcut-sheet'
 
@@ -80,10 +80,10 @@ export default function HelpInfoDropdown({
               className='w-[14rem]'
               side='top'
             >
-              {helpNav.map((block) => (
-                <Fragment key={block.index}>
+              {navItems.map(({ index, items }) => (
+                <Fragment key={index}>
                   <DropdownMenu.Group>
-                    {block.items.map((item) => {
+                    {items.map((item) => {
                       return (
                         <DropdownMenu.Item
                           className='cursor-pointer'
@@ -107,7 +107,7 @@ export default function HelpInfoDropdown({
                     })}
                   </DropdownMenu.Group>
 
-                  {/* {block.index !== helpNav.length && <DropdownMenu.Separator />} */}
+                  {index !== navItems.length && <DropdownMenu.Separator />}
                 </Fragment>
               ))}
             </DropdownMenu.Content>

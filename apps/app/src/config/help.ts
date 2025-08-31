@@ -10,7 +10,7 @@ type HelpNavBlock = {
   items: HelpNavItem[]
 }
 
-export const helpNav: HelpNavBlock[] = [
+export const navItems: HelpNavBlock[] = [
   {
     index: 1,
     items: [

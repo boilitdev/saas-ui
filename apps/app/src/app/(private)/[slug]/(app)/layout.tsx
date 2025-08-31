@@ -5,14 +5,19 @@ import SidebarProvider from '@acme/ui/providers/sidebar'
 import AppSidebar from '@/components/app-sidebar'
 import SidebarLayout from '@/components/sidebar-layout'
 
-type PrivateLayoutProps = {
+type AppLayoutProps = {
   children: ReactNode
+  params: Promise<{
+    slug: string
+  }>
 }
 
-export default async function PrivateLayout({ children }: PrivateLayoutProps) {
+export default async function AppLayout({ params, children }: AppLayoutProps) {
+  const { slug } = await params
+
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar slug={slug} />
 
       <SidebarLayout>{children}</SidebarLayout>
     </SidebarProvider>
