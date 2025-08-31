@@ -105,7 +105,7 @@ export default function AppSidebarFavoritesGroup({
                     space?.name &&
                     typeof space.identifier === 'string'
                   ) {
-                    const spaceHref = `/${slug}/spaces/${space.identifier}`
+                    const spaceHref = `/${slug}/space/${space.identifier}`
 
                     return (
                       <Sidebar.MenuItem

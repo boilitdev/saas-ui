@@ -41,7 +41,7 @@ export default function AppSidebar({ slug, ...props }: AppSidebarProps) {
   //   const space = spaces?.[index - 1]
 
   //   if (space) {
-  //     router.push(`/${slug}/spaces/${space.identifier}`)
+  //     router.push(`/${slug}/space/${space.identifier}`)
   //   }
   // }
 
@@ -98,7 +98,7 @@ export default function AppSidebar({ slug, ...props }: AppSidebarProps) {
   // Register Alt+0 for new space
   // useGlobalHotkeys({
   //   keys: 'alt+0',
-  //   callback: () => router.push(`/${slug}/settings/new-space`),
+  //   callback: () => router.push(`/${slug}/space/new`),
   //   options: { enabled: !!user },
   // })
 
@@ -194,15 +194,13 @@ export default function AppSidebar({ slug, ...props }: AppSidebarProps) {
                       <Sidebar.MenuItem key={id}>
                         <Sidebar.MenuButton
                           asChild
-                          isActive={
-                            pathname === `/${slug}/spaces/${identifier}`
-                          }
+                          isActive={pathname === `/${slug}/space/${identifier}`}
                           // tooltip={space.name}
                           // tooltipShortcut={
                           //   hasShortcut ? `Alt+${shortcutNumber}` : undefined
                           // }
                         >
-                          <Link href={`/${slug}/spaces/${identifier}`}>
+                          <Link href={`/${slug}/space/${identifier}`}>
                             {icon ? (
                               <span className='size-4 text-center text-xs'>
                                 {icon}
@@ -224,7 +222,7 @@ export default function AppSidebar({ slug, ...props }: AppSidebarProps) {
                       tooltip='Create a new space'
                       // tooltipShortcut='Alt+0'
                     >
-                      <Link href={`/${slug}/settings/new-space`}>
+                      <Link href={`/${slug}/space/new`}>
                         <PlusIcon />
 
                         <span>New space</span>

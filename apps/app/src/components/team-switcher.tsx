@@ -63,16 +63,14 @@ export default function TeamSwitcher({ slug, email }: TeamSwitcherProps) {
               className='w-[--radix-dropdown-menu-trigger-width] min-w-56 font-normal text-accent-foreground'
             >
               <DropdownMenu.Item asChild className='cursor-pointer'>
-                <Link href={`/${slug}/settings/preferences`}>
+                <Link href={`/${slug}/profile`}>
                   Settings
                   <DropdownMenu.Shortcut>G then S</DropdownMenu.Shortcut>
                 </Link>
               </DropdownMenu.Item>
 
               <DropdownMenu.Item asChild className='cursor-pointer'>
-                <Link href={`/${slug}/settings/members`}>
-                  Invite or manage members
-                </Link>
+                <Link href={`/${slug}/members`}>Invite or manage members</Link>
               </DropdownMenu.Item>
 
               <DropdownMenu.Separator />
