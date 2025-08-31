@@ -119,7 +119,9 @@ export default function AppSidebarFavoritesGroup({
                         <Sidebar.MenuButton asChild>
                           <Link href={spaceHref}>
                             {space.icon ? (
-                              <span className='text-xs'>{space.icon}</span>
+                              <span className='size-4 text-xs'>
+                                {space.icon}
+                              </span>
                             ) : (
                               <TentIcon />
                             )}

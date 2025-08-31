@@ -7,7 +7,6 @@ import LayeredHotkeys from '@acme/ui/components/layered-hotkeys'
 import Sidebar from '@acme/ui/components/sidebar'
 import DropdownMenu from '@acme/ui/components/dropdown-menu'
 import Avatar from '@acme/ui/components/avatar'
-import Label from '@acme/ui/components/label'
 import { ChevronsUpDownIcon, SearchIcon } from '@acme/ui/icon'
 import Button from '@acme/ui/components/button'
 import useSidebar from '@acme/ui/hooks/use-sidebar'
@@ -53,7 +52,7 @@ export default function TeamSwitcher({ slug, email }: TeamSwitcherProps) {
                   </Avatar.Fallback>
                 </Avatar>
 
-                <Label className='font-normal'>{workspace?.name}</Label>
+                <span>{workspace?.name}</span>
 
                 <ChevronsUpDownIcon className='text-muted-foreground' />
               </Sidebar.MenuButton>
@@ -102,7 +101,7 @@ export default function TeamSwitcher({ slug, email }: TeamSwitcherProps) {
                           </Avatar.Fallback>
                         </Avatar>
 
-                        <Label className='font-normal'>{workspace?.name}</Label>
+                        <span>{workspace?.name}</span>
                       </DropdownMenu.Item>
                     </DropdownMenu.Group>
 

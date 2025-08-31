@@ -184,31 +184,34 @@ export default function AppSidebar({ ...props }: AppSidebarProps) {
             <Collapsible.Content>
               <Sidebar.GroupContent>
                 <Sidebar.Menu>
-                  {spaces?.map((space, index) => {
+                  {/** biome-ignore lint/correctness/noUnusedFunctionParameters: This is necessary for the map function */}
+                  {spaces?.map(({ id, identifier, icon, name }, index) => {
                     // const shortcutNumber = index + 1
 
                     // const hasShortcut = shortcutNumber <= 9
 
                     return (
-                      <Sidebar.MenuItem key={space.id}>
+                      <Sidebar.MenuItem key={id}>
                         <Sidebar.MenuButton
                           asChild
                           isActive={
-                            pathname === `/${slug}/spaces/${space.identifier}`
+                            pathname === `/${slug}/spaces/${identifier}`
                           }
                           // tooltip={space.name}
                           // tooltipShortcut={
                           //   hasShortcut ? `Alt+${shortcutNumber}` : undefined
                           // }
                         >
-                          <Link href={`/${slug}/spaces/${space.identifier}`}>
-                            {space.icon ? (
-                              <span className='text-xs'>{space.icon}</span>
+                          <Link href={`/${slug}/spaces/${identifier}`}>
+                            {icon ? (
+                              <span className='size-4 text-center text-xs'>
+                                {icon}
+                              </span>
                             ) : (
                               <TentIcon />
                             )}
 
-                            <span>{space.name}</span>
+                            <span>{name}</span>
                           </Link>
                         </Sidebar.MenuButton>
                       </Sidebar.MenuItem>
