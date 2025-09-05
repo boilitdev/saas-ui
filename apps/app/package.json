@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@acme/editor": "workspace:~",
     "@acme/ui": "workspace:~",
     "@tailwindcss/postcss": "~4.1.12",
     "cssnano": "~7.1.1",
@@ -18,6 +19,8 @@
     "react": "~19",
     "react-dom": "~19",
     "tailwindcss": "4.1.12",
+    "use-debounce": "~10.0.5",
+    "uuid": "~11.1.0",
     "zustand": "~5.0.8"
   },
   "devDependencies": {

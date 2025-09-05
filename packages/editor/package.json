@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@acme/editor",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./extensions": "./src/extensions/index.ts",
+    "./lib/utils/*": "./src/lib/utils/*.ts",
+    "./types/*": "./src/types/*.ts",
+    "./markdown-extensions": "./src/markdown-extensions.ts",
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@acme/ui": "workspace:~",
+    "@tiptap/core": "~3.3.0",
+    "@tiptap/extension-code-block-lowlight": "~3.3.0",
+    "@tiptap/extension-document": "~3.3.0",
+    "@tiptap/extension-heading": "~3.3.0",
+    "@tiptap/extension-highlight": "~3.3.0",
+    "@tiptap/extension-horizontal-rule": "~3.3.0",
+    "@tiptap/extension-image": "~3.3.0",
+    "@tiptap/extension-link": "~3.3.0",
+    "@tiptap/extension-list": "~3.3.0",
+    "@tiptap/extension-paragraph": "~3.3.0",
+    "@tiptap/extension-subscript": "~3.3.0",
+    "@tiptap/extension-superscript": "~3.3.0",
+    "@tiptap/extension-text-style": "~3.3.0",
+    "@tiptap/extension-typography": "~3.3.0",
+    "@tiptap/extension-underline": "~3.3.0",
+    "@tiptap/extensions": "~3.3.0",
+    "@tiptap/pm": "~3.3.0",
+    "@tiptap/react": "~3.3.0",
+    "@tiptap/starter-kit": "~3.3.0",
+    "lowlight": "~3.3.0",
+    "react": "~19",
+    "tippy.js": "~6.3.7",
+    "uuid": "~11.1.0"
+  },
+  "devDependencies": {
+    "@acme/typescript-config": "workspace:~",
+    "@types/node": "~22.8.1",
+    "@types/react": "~19",
+    "typescript": "~5.9.2"
+  }
+}

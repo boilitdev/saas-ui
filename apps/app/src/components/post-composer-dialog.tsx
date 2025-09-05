@@ -6,10 +6,16 @@ import useGlobalHotkeys from '@acme/ui/hooks/use-global-hotkeys'
 import Dialog from '@acme/ui/components/dialog'
 import Sidebar from '@acme/ui/components/sidebar'
 
+import useSpaces from '@/hooks/use-spaces'
+import useCurrentWorkspace from '@/hooks/use-current-workspace'
 // import useLocalStoragePost from '@/hooks/use-local-storage-post'
+import type { PostSchema } from '@/schemas/post'
 
 import type { PostComposerFormRef } from './post-composer-form-provider'
 import PostComposerFormProvider from './post-composer-form-provider'
+import PostComposerForm from './post-composer-form'
+import PostComposerSpacesPicker from './post-composer-spaces-picker'
+import PostComposerActions from './post-composer-actions'
 import UnsavedChangesDialog from './unsaved-changes-dialog'
 
 export default function PostComposerDialog() {
@@ -20,9 +26,8 @@ export default function PostComposerDialog() {
 
   const formRef = useRef<PostComposerFormRef>(null)
 
-  // const queryClient = useQueryClient()
-  // const { data: spaces } = useSpacesQuery()
-  // const { data: workspace } = useCurrentWorkspaceQuery()
+  const { data: spaces } = useSpaces()
+  const { data: workspace } = useCurrentWorkspace()
   // const { clearLocalStorage, hasStoredPost } = useLocalStoragePost()
 
   // const { mutate: createPost, status: isSubmitting } = useMutation(
@@ -105,21 +110,21 @@ export default function PostComposerDialog() {
     setOpen(false)
   }
 
-  // const handleSubmitPost = (data: PostSchema) => {
-  //   createPost({
-  //     title: data.title,
-  //     description: data.description,
-  //     space_id: data.space_id,
-  //   })
-  // }
+  const handleSubmitPost = (data: PostSchema) => {
+    // createPost({
+    //   title: data.title,
+    //   description: data.description,
+    //   space_id: data.space_id,
+    // })
+  }
 
-  // const handleSaveDraft = (data: PostSchema) => {
-  //   createDraft({
-  //     title: data.title,
-  //     description: data.description,
-  //     space_id: data.space_id,
-  //   })
-  // }
+  const handleSaveDraft = (data: PostSchema) => {
+    // createDraft({
+    //   title: data.title,
+    //   description: data.description,
+    //   space_id: data.space_id,
+    // })
+  }
 
   useGlobalHotkeys({
     keys: 'c',
@@ -167,21 +172,27 @@ export default function PostComposerDialog() {
               Dialog to create a new post.
             </Dialog.Description>
 
-            {/* <PostComposerForm>
+            <PostComposerForm>
               <PostComposerSpacesPicker
                 open={openSpacePicker}
                 setOpen={setOpenSpacePicker}
                 spaces={spaces || []}
                 workspaceSlug={workspace?.slug ?? ''}
               />
-            </PostComposerForm> */}
+            </PostComposerForm>
 
-            {/* <PostComposerActions
-              isDraftSaving={isDraftSaving === 'pending'}
-              isSubmitting={isSubmitting === 'pending'}
+            <PostComposerActions
+              isDraftSaving={
+                // isDraftSaving === 'pending'
+                false
+              }
+              isSubmitting={
+                // isSubmitting === 'pending'
+                false
+              }
               onSaveDraft={handleSaveDraft}
               onSubmit={handleSubmitPost}
-            /> */}
+            />
           </Dialog.Content>
         </Dialog>
       </PostComposerFormProvider>

@@ -3,6 +3,7 @@ export default function useCurrentWorkspace() {
     data: {
       name: 'Acme',
       logo: '',
+      slug: 'acme',
     },
   }
 }
