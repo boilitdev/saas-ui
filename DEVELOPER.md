@@ -8,7 +8,7 @@
 - [pnpm](https://pnpm.io/installation)
 - [bun](https://bun.sh/docs/installation)
 
-**Note:** We recommend using bun for local development.
+**Note:** We recommend run with `bun` for better local development performance.
 
 ### Setup
 
